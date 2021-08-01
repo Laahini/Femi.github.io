@@ -1,0 +1,28 @@
+:root{
+  --pink: #c86374;
+  --blue: #445271;
+}
+*{
+  margin:10px;
+  font-family: sans-serif;
+}
+body{
+  background-color:white;
+  color:var(--pink);
+}
+.nav-grid{
+  display:grid;
+  grid-template-columns: 50% 50%;
+  text-align: right;
+}
+#navbar h2{
+  text-align:left;
+}
+#navbar a{
+  text-decoration: none;
+  color:var(--pink);
+  font-weight: bold;
+}
+#navbar a:hover{
+  color:var(--blue);
+}

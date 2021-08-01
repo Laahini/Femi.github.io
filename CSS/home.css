@@ -1,0 +1,36 @@
+:root{
+  --pink: #c86374;
+  --blue: #445271;
+}
+*{
+  margin:10px;
+  font-family: sans-serif;
+}
+body{
+  background-color:var(--pink);
+  color:white;
+}
+.nav-grid{
+  display:grid;
+  grid-template-columns: 50% 50%;
+  text-align: right;
+}
+#navbar h2{
+  text-align:left;
+}
+a{
+  text-decoration: none;
+  color:white;
+  font-weight: bold;
+}
+a:hover{
+  color:var(--blue);
+}
+#landing h1{
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 100px;
+}
+#landing-grid{
+  display:grid;
+  grid-template-columns: 55% 45%;
+}

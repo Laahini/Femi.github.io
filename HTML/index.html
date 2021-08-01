@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Login | Femi</title>
   <!--ADD CSS AND HTML FILES HERE-->
+  <link rel="stylesheet" href="../CSS/modal.css"/>
+  <link rel="stylesheet" href="../CSS/login.css"/>
+  <link rel="icon" href="favicon.ico">
   <script src="../JS/login.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
@@ -13,37 +16,64 @@
 
 <body>
   <div id="loginPage-grid">
-    <div>
-      <!--ADD image here (maybe a cool graphic of circles/abstract)-->
+    <div class="item">
+      <img src="../Media/females-rule2.png" style="width:80%; padding:2% 10%; margin-top:-5%; height:118%;">
     </div>
-    <div>
+
+    <div class="item">
       <div id="login-grid">
 
-        <div>
+        <div class="item">
           <div id="noAccount-grid">
             <h4>Don't have an account?</h4>
-            <button>Sign Up</button>
+            <button id="openModal" class="signUpBtn2">Sign Up</button>
           </div>
         </div>
 
-        <div id="loginHeader-grid">
-          <h2>Hey Girlie!</h2>
+        <br><br><br>
+
+        <div id="loginHeader" class="item">
+          <h1>Hey Girlie!</h1>
           <h4>Welcome to Femi, manage your health now!</h4>
         </div>
 
-        <div id="loginSign-grid">
-          <input id="email" type='email' name='email' placeholder='Email' required class="form-item"><br>
-        	<input id="password" type='password' name='password' placeholder='Password' required class="form-item"><br>
-          <button onclick="signIn()" id="signIn" class="form-item signbtn">Sign In</button><br>
-        </div>
-
-        <div>
-
+        <div id="loginSign-grid" class="item">
+          <input id="email" type='email' name='email' placeholder='Email' required class="form-item2"><br>
+        	<input id="password" type='password' name='password' placeholder='Password' required class="form-item2"><br>
+          <button onclick="signIn()" id="signIn" class="signInBtn">Sign In</button><br>
         </div>
 
       </div>
     </div>
   </div>
+
+
+  <div id="Modal" class="modal">
+    <div id="modalContainer">
+      <span class="close">&times;</span>
+      <input id="email2" type='email' name='email' placeholder='Email' required class="form-item"><br>
+      <input id="password2" type="password" name="password" placeholder="Password" required="required" class="form-item"><br>
+      <button onclick="signUp()" id="signUp" class="form-item signUpBtn">Sign Up</button>
+    </div>
+
+    <script>
+    var modal = document.getElementById("Modal");
+    var button = document.getElementById("openModal")
+    var span = document.getElementsByClassName("close")[0];
+    button.onclick= function(){
+      modal.style.display="block"
+    }
+    span.onclick= function(){
+      modal.style.display="none"
+    }
+    window.onclick= function(event){
+      if (event.target==modal){
+        modal.style.display="none";
+      }
+    }
+    </script>
+  </div>
+
 </body>
 
 </html>

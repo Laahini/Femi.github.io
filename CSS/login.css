@@ -51,6 +51,9 @@ body{
   border-color:none;
   margin:2% 28%;
 }
-#login-grid .item #noAccount-grid h4{
+#noAccount-grid h4{
   color:#242424;
+}
+#loginHeader h1, #loginHeader h4{
+  padding-bottom:2%;
 }
